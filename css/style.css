@@ -1,0 +1,549 @@
+* {
+  margin : 0;
+  padding : 0;
+  border : 0;
+  font-family: 'Inconsolata', monospace;
+}
+
+body, html {
+  width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+.clear {
+  clear : both;
+}
+
+
+#page-wrapper {
+  width : 100%;
+  height : auto;
+  position: relative;
+}
+
+#header {
+  position: fixed;
+  display: none;
+  width : 100%;
+  background:rgba(0,0,0,0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  z-index: 1;
+}
+
+#navbar {
+  display : flex;
+  margin : auto;
+  text-decoration: none;
+  list-style: none;
+  width : 50%;
+  color : white;
+}
+#navbar a {
+  flex : 1;
+  text-align: center;
+  display : inline-block;
+  color : rgba(255,255,255,0.5);
+  text-decoration: none;
+  padding : 1rem 0;
+}
+
+#navbar a:hover {
+  background-color : rgba(255,255,255,0.1);
+}
+
+#index-page {
+  text-align: center;
+  display : flex;
+  margin: auto;
+}
+.flex-landing {
+  width : 80%;
+  background-color: rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+#index-page-content {
+  width: 100%;
+  margin : auto;
+  font-size : 2rem;
+  color : rgba(255,255,255,0.55);
+  transition : all ease 0.5s;
+  padding: 0rem;
+}
+#index-page-content div {
+  margin: auto;
+}
+#index-page-content h1 {
+  font-size : 2em;
+}
+#index-page-content img {
+  padding : 1rem;
+}
+#index-page-content:hover {
+  background:rgba(255,255,255,0.05);
+  color : rgba(255,0,0,0.75);
+  cursor: pointer;
+}
+#index-page-content:hover .hide {
+
+  color : rgba(255,0,0,0.75);
+}
+.hide {
+  color : rgba(255,20,20,1);
+  transition: all 0.5s ease;
+}
+.deets {
+}
+.mission {
+  width: 100%;
+  margin: auto;
+  color : rgba(255,255,255,0.25);
+}
+.ms h2,h3,p,a {
+  padding : 1rem;
+  text-decoration: none;
+}
+.ms {
+  color : rgba(255,255,255,0.4);
+  margin-bottom: 2rem;
+}
+
+.pretty-button {
+  border : 1px solid blue;
+  color : rgba(0,0,0,0.3) !important;
+  padding : 1rem 2rem;
+  font-size : 2rem;
+  transition: all 0.2s ease;
+}
+.pretty-button:hover {
+  padding : 1rem 5rem;
+  color : black !important;
+}
+.light-pretty-button {
+  border : 1px solid blue;
+  color : rgba(255,255,255,.3) !important;
+  padding : 1rem 2rem;
+  font-size : 2rem;
+  transition: all 0.2s ease;
+}
+.light-pretty-button:hover {
+  background-color: rgba(20,40,80,0.5);
+  padding : 1rem 5rem;
+}
+#services-page {
+  width: 100%;
+  margin: auto;
+  background-color: rgba(0,0,0,0.25);
+  padding : 3rem 0;
+}
+.serv-flex {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.serv-item {
+  text-align: center;
+  width : 30%;
+  margin: 1rem 0;
+}
+.serv-item:hover i {
+  font-size : 12rem;
+  margin : 0;
+  color : rgba(255,0,0,0.9);
+}
+.serv-item .serv-title {
+  font-size : 2rem;
+}
+.serv-item i {
+  text-align: center;
+  font-size: 10rem;
+  margin : 1rem 0;
+  transition: all 0.25s ease;
+}
+.serv-item button {
+  width: 80%;
+  padding : 1rem;
+  font-size : 1.5rem;
+  background-color: rgba(0,0,0,0);
+  border : 1px solid rgba(0,0,255,0.9);
+  transition: all 0.25s ease;
+}
+.serv-item button:hover {
+  background-color: rgba(0,0,120,0.1);
+  cursor: pointer;
+}
+
+#webDevFull {
+}
+#itSupportFull {
+}
+#vaServiceFull {
+}
+.fs-popup {
+  position: fixed;
+  top : 0;
+  left : 0;
+  display: none;
+  width: 100vw;
+  height : 100vh;
+  z-index: 10;
+  background-color: rgba(255,255,255,0.85);
+  transition: all 2s ease;
+}
+.fs-popup i {
+  float : right;
+  margin-right : 3rem;
+  font-size : 5rem;
+  transition: all 0.2s ease;
+}
+.fs-popup i:hover {
+  color : red;
+}
+
+#testimonials {
+  width : 100%;
+  background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('../img/tech5.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding : 10% 0;
+}
+.testimonials-inner {
+  width : 80%;
+  margin : auto;
+  background-color: rgba(0,0,0,0.5);
+}
+.testimonial {
+  color : rgba(255,255,255,0.75);
+  padding : 2rem;
+}
+#contact-page {
+  display: flex;
+  width : 100%;
+  margin : auto;
+  background-image : url("../img/bg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+}
+#contact-page-content {
+  width : 80%;
+  display: flex;
+  flex-direction: row;
+  margin : auto;
+  background-color: rgba(0,0,0,0.75);
+}
+#social-content {
+  width : 20%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-right : 1px solid rgba(255,255,255,0.2);
+}
+#social-content a {
+  flex : 1;
+  padding : 2rem;
+  font-size : 1.5rem;
+  color : rgba(255,255,255,0.5);
+  transition: all 0.2 ease;
+}
+#social-content a:hover {
+  color : rgba(255,0,0,1);
+  background-color: rgba(255,255,255,0.05);
+  transition: all 0.2 ease;
+}
+
+#contact-form {
+  width : 80%;
+}
+form#contact {
+  width: 100%;
+  height : 100%;
+  display: flex;
+  flex-direction: column;
+}
+form#contact input {
+  flex : 1;
+  font-size : 1.25rem;
+  padding : 1rem;
+  margin : 0;
+  background-color : rgba(0,0,0,0);
+  border-top : 1px solid rgba(255,255,255,0.2);
+  transition: all 0.2s ease;
+  color : white;
+}
+form#contact input:hover::placeholder {
+  color : rgba(255,0,0,1);
+  background-color: rgba(255,255,255,0.15);
+  transition: all 0.2 ease;
+}
+form#contact textarea {
+  font-size : 1.25rem;
+  padding : 1rem;
+  margin :0;
+  background-color: rgba(0,0,0,0);
+  border-top : 1px solid rgba(255,255,255,0.2);
+  height : 15rem;
+  transition: all 0.2 ease;
+  color : white;
+}
+form#contact textarea:hover::placeholder {
+  color : rgba(255,0,0,1);
+  background-color: rgba(255,255,255,0.15);
+  transition: all 0.2 ease;
+}
+form#contact input[type=submit] {
+  position: relative;
+  bottom : 0;
+  left : 0;
+  color : rgba(255,255,255,0.5);
+  font-size : 1.5rem;
+  padding : 1.5rem 0;
+}
+form#contact input[type=submit]:hover {
+  color : red;
+  background-color: rgba(255,255,255,0.15);
+}
+form#contact input::placeholder, form#contact textarea::placeholder {
+  color : rgba(255,255,255,0.5);
+}
+#terms-wrapper {
+  background-color: rgba(0,0,0,0.9);
+}
+#terms-conds {
+  width : 80%;
+  margin: auto;
+  color : rgba(255,255,255,0.5);
+}
+#terms-conds img {
+  margin : auto;
+  text-align: center;
+  position: relative;
+  width : 10%;
+  left : 45%;
+}
+#footer {
+width : 100%;
+position: relative;
+bottom : 0;
+background-image : url('../img/bg.jpg');
+background-position: center;
+background-size: cover;
+/*background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+#footer-inner {
+  width : 80%;
+  margin : auto;
+  color : rgba(255,255,255,0.5);
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+}
+#footer-inner p {
+  padding : 1rem;
+}
+#footer-inner a {
+  color : rgba(255,255,255,0.5);
+
+}
+#footer-inner a:hover {
+  color : rgba(255,0,0,1);
+}
+.footer-links{
+  padding : 2rem 0;
+  text-align: left;
+}
+.footer-links a {
+  padding : 1rem;
+  margin : 0;
+}
+.footer-links a:hover {
+  background-color: rgba(255,255,255,0.05);
+}
+.parallax {
+  /* The image used */
+  background-image: url("../img/tech2.jpeg");
+
+  /* Full height */
+  height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax2 {
+  /* The image used */
+  background-image: url("../img/tech5.jpg");
+
+  /* Full height */
+  height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.para {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: auto;
+}
+.container {
+
+}
+
+.container h1 {
+
+}
+.horizontal-border {
+  border-top : 10px solid black;
+}
+@media only screen and (max-width: 1000px) {
+
+}
+
+@media only screen and (max-width: 800px) {
+  #navbar {
+    width : 100%;
+  }
+  #index-page {
+    height : 100vh !important;
+  }
+  #index-page-content h1 {
+    font-size : 1.5em;
+  }
+  #index-page-content h3 {
+    font-size : 1.5rem;
+  }
+  #index-page-content p {
+    font-size : 1.2rem;
+  }
+  .logo img{
+    width : 100px;
+    height : 100px;
+  }
+  .flex-landing {
+    width : 100%;
+    height : 100%;
+  }
+  .ms {
+    width : 80%;
+    margin : 0 auto 5rem auto;
+  }
+  .ms a {
+    font-size : 1rem;
+    width : 50%;
+  }
+  a.light-pretty-button {
+    color : rgba(255,220,220,0.75) !important;
+  }
+  #index-page-content {
+    flex-direction: column;
+  }
+
+  .hide {
+    display: block;
+    font-size: 0.8rem;
+  }
+
+  .serv-flex {
+    flex-direction: column;
+  }
+
+  .serv-item {
+    text-align: center;
+    width : 100%;
+    margin: 2rem 0;
+  }
+
+  .fs-popup i {
+    margin-right : 1.5rem;
+    font-size : 3rem;
+  }
+
+  #contact-page-content {
+    width : 100%;
+    flex-direction: column;
+  }
+  #social-content {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    border-right : 0px solid rgba(255,255,255,0.2);
+  }
+  #social-content a {
+
+    min-width: 10% !important;
+    margin : auto;
+    text-align: center;
+    font-size : 1.5rem;
+    color : rgba(255,255,255,0.5);
+    transition: all 0.2 ease;
+  }
+  #social-content a:hover {
+  }
+
+  #contact-form {
+    width : 100%;
+    text-align: right;
+  }
+  form#contact input {
+    font-size : 1.5rem;
+    padding : 1rem;
+  }
+  form#contact input:hover {
+    background-color: rgba(255,255,255,0.1);
+  }
+  form#contact input:hover::placeholder {
+    color : rgba(255,255,255,1);
+    background-color: rgba(0,0,0,0);
+  }
+  form#contact textarea {
+    font-size : 1.5rem;
+    padding : 1rem;
+    margin :0;
+    background-color: rgba(0,0,0,0);
+    border-top : 1px solid rgba(255,255,255,0.2);
+    height : 15rem;
+    transition: all 0.2 ease;
+    color : white;
+  }
+  form#contact textarea:hover {
+    background-color: rgba(255,255,255,0.1);
+  }
+  form#contact textarea:hover::placeholder {
+    color : rgba(255,255,255,1);
+    background-color: rgba(0,0,0,0);
+  }
+  form#contact input[type=submit] {
+    position: relative;
+    bottom : 0;
+    left : 0;
+    color : rgba(255,255,255,0.35);
+    font-size : 1.5rem;
+    padding : 1.5rem 0;
+  }
+  form#contact input[type=submit]:hover {
+    color : red;
+    background-color: rgba(255,255,255,0.5);
+  }
+  form#contact input::placeholder, form#contact textarea::placeholder {
+    color : rgba(255,255,255,0.5);
+  }
+}
